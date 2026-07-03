@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Adithya Pratama — CV</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:  #0f0f0f;
+    --dark:   #2a2a2a;
+    --mid:    #555;
+    --light:  #888;
+    --rule:   #ddd;
+    --bg:     #fff;
+    --accent: #1a56db;
+  }
+
+  @page {
+    size: A4;
+    margin: 16mm 18mm;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 9pt;
+    line-height: 1.45;
+    color: var(--dark);
+    background: #f2f2f2;
+    padding: 24px 12px;
+  }
+
+  .page {
+    background: var(--bg);
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 14mm 18mm 14mm;
+    box-shadow: 0 2px 16px rgba(0,0,0,.1);
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    gap: 16px;
+  }
+  .header-left h1 {
+    font-size: 18pt;
+    font-weight: 700;
+    letter-spacing: -.3px;
+    color: var(--black);
+    line-height: 1.1;
+  }
+  .header-left .role {
+    font-size: 8pt;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .header-right {
+    text-align: right;
+    font-size: 8pt;
+    color: var(--mid);
+    line-height: 1.7;
+    flex-shrink: 0;
+  }
+  .header-right a { color: var(--accent); text-decoration: none; }
+
+  /* RULE */
+  .rule { border: none; border-top: 1.5px solid var(--rule); margin: 8px 0; }
+  .thin-rule { border: none; border-top: 1px solid #eee; margin: 7px 0; }
+
+  /* SECTION TITLE */
+  .sec {
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  /* TWO-COL LAYOUT */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+  }
+  .col-block { margin-bottom: 9px; }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 98px 1fr;
+    gap: 3px 8px;
+    font-size: 8.5pt;
+  }
+  .sk-label { font-weight: 600; color: var(--black); }
+  .sk-value { color: var(--dark); }
+
+  /* CERTS */
+  .cert-row { display: flex; flex-wrap: wrap; gap: 5px; }
+  .cert-tag {
+    font-size: 7.5pt;
+    font-weight: 500;
+    color: var(--accent);
+    background: #eef2ff;
+    border: 1px solid #c7d5f8;
+    border-radius: 3px;
+    padding: 1.5px 7px;
+  }
+  .cert-tag a { color: inherit; text-decoration: none; }
+
+  /* ENTRY */
+  .entry { margin-bottom: 8px; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6px;
+  }
+  .entry-title { font-size: 9.5pt; font-weight: 600; color: var(--black); }
+  .entry-date { font-size: 7.5pt; color: var(--light); white-space: nowrap; flex-shrink: 0; }
+  .entry-sub { font-size: 8pt; color: var(--mid); margin-bottom: 4px; }
+  .entry-sub em { font-style: normal; color: var(--accent); font-weight: 600; }
+
+  /* BULLETS */
+  ul { padding-left: 12px; margin: 0; }
+  ul li {
+    font-size: 8.5pt;
+    line-height: 1.45;
+    color: var(--dark);
+    margin-bottom: 2.5px;
+    padding-left: 1px;
+  }
+  ul li::marker { color: var(--accent); }
+  ul li:last-child { margin-bottom: 0; }
+  ul li strong { color: var(--black); font-weight: 600; }
+
+  /* BADGES */
+  .pub-badge {
+    display: inline-block;
+    font-size: 7.5pt;
+    font-weight: 600;
+    color: #065f46;
+    background: #d1fae5;
+    border: 1px solid #6ee7b7;
+    border-radius: 3px;
+    padding: 1.5px 7px;
+    margin-top: 4px;
+  }
+  .pub-badge a { color: inherit; text-decoration: none; }
+
+  /* SECTION WRAPPER */
+  .section { margin-bottom: 9px; }
+
+  /* SUMMARY */
+  .summary { font-size: 8.5pt; color: var(--dark); line-height: 1.55; }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Muhammad Adithya Pratama</h1>
+      <div class="role">Cloud Engineer · DevOps · Fresh Graduate</div>
+    </div>
+    <div class="header-right">
+      +62 896-9343-5782 &nbsp;·&nbsp; adutya37@gmail.com<br>
+      <a href="https://linkedin.com/in/muhammad-adithya">linkedin.com/in/muhammad-adithya</a><br>
+      <a href="https://github.com/adit37">github.com/adit37</a> &nbsp;·&nbsp; Jakarta, Indonesia
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- PROFILE -->
+  <div class="section">
+    <div class="sec">Profile</div>
+    <p class="summary">
+      Fresh Graduate in Informatics Engineering (GPA 3.65/4.00) with hands-on experience deploying containerized applications
+      on GCP via Bangkit Academy (Google, GoTo, Traveloka) and undergraduate research. Skilled in Cloud Run, Cloud SQL, VPC,
+      IAM, and CI/CD automation using Cloud Build and GitHub Actions. Published cross-cloud performance research
+      (Cloud Run vs AWS App Runner using k6) in JAIEA Sinta Rank 5. AWS Certified Cloud Practitioner.
+    </p>
+  </div>
+
+  <hr class="rule">
+
+  <!-- TWO-COL: SKILLS + CERTS + EDU -->
+  <div class="two-col">
+
+    <!-- LEFT: SKILLS -->
+    <div class="col-block">
+      <div class="sec">Skills</div>
+      <div class="skills-grid">
+        <span class="sk-label">Cloud — GCP</span>
+        <span class="sk-value">Cloud Run, Cloud Build, Artifact Registry, Cloud SQL, Cloud Storage, VPC, IAM, Firebase Storage</span>
+
+        <span class="sk-label">Cloud — AWS</span>
+        <span class="sk-value">App Runner <span style="color:#999">(thesis)</span></span>
+
+        <span class="sk-label">CI/CD &amp; DevOps</span>
+        <span class="sk-value">GitHub Actions, Cloud Build, Docker</span>
+
+        <span class="sk-label">Testing</span>
+        <span class="sk-value">k6 (load testing, benchmarking)</span>
+
+        <span class="sk-label">Languages</span>
+        <span class="sk-value">Go, Node.js (NestJS), Python</span>
+
+        <span class="sk-label">Networking</span>
+        <span class="sk-value">MikroTik, VPC private IP, subnetting</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: CERTS + EDU -->
+    <div>
+      <div class="col-block">
+        <div class="sec">Certifications</div>
+        <div class="cert-row">
+          <span class="cert-tag">
+            <a href="https://www.credly.com/badges/dcb8635e-6bf0-4721-a3fe-a3b74a88e298/public_url" target="_blank">
+              🏅 AWS Cloud Practitioner · 2025
+            </a>
+          </span>
+          <span class="cert-tag">
+            <a href="https://www.skills.google/public_profiles/a96d4593-bcec-41e1-8a7d-4167272ed370" target="_blank">
+              🏅 Google Cloud Skill Boost · 2024
+            </a>
+          </span>
+        </div>
+      </div>
+
+      <div class="col-block">
+        <div class="sec">Education</div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">STMIK IKMI Cirebon</span>
+            <span class="entry-date">2022 – 2026</span>
+          </div>
+          <div class="entry-sub">S1 Informatics Engineering &nbsp;·&nbsp; GPA 3.65 / 4.00</div>
+        </div>
+        <div class="thin-rule"></div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="entry-title">SMKN 1 Gebang</span>
+            <span class="entry-date">2018 – 2021</span>
+          </div>
+          <div class="entry-sub">Computer &amp; Network Engineering</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /two-col -->
+
+  <hr class="rule">
+
+  <!-- PROJECTS -->
+  <div class="section">
+    <div class="sec">Projects</div>
+
+    <!-- Thesis -->
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Cross-Cloud Serverless Performance Analysis — Undergraduate Thesis</span>
+        <span class="entry-date">2025 – 2026</span>
+      </div>
+      <div class="entry-sub"><em>Researcher &amp; Cloud Engineer</em> &nbsp;·&nbsp; STMIK IKMI Cirebon</div>
+      <ul>
+        <li>Designed a cross-cloud topology deploying identical containerized REST API on both <strong>Cloud Run (GCP)</strong> and <strong>AWS App Runner</strong>, with shared data layer (Cloud SQL, Cloud Storage) on GCP — simulating real cross-provider network conditions.</li>
+        <li>Configured equivalent specs on both platforms (1 vCPU, 2 GB, concurrency 80, min 1/max 10 instances); synchronized deployments from a single GitHub repo using Cloud Build and App Runner native GitHub integration.</li>
+        <li>Executed structured <strong>k6 load testing</strong> up to 1,000 VUs across 5 repeated runs — measuring latency (p90/p95), throughput (RPS), and autoscaling responsiveness.</li>
+        <li>Results: <strong>Cloud Run</strong> p95 47–71 ms · 436–438 RPS · <strong>0% error rate</strong>. <strong>App Runner</strong> p95 490–651 ms · 388–410 RPS · error rate up to 4.41% — attributed to cross-cloud TLS overhead and backlog-based autoscaling lag.</li>
+      </ul>
+      <div class="pub-badge">
+        <a href="https://ioinformatic.org/index.php/JAIEA/article/view/1919" target="_blank">
+          📄 Published · JAIEA Sinta Rank 5 · Vol. 5 No. 2 · Feb 2026 · DOI: 10.59934/jaiea.v5i2.1919
+        </a>
+      </div>
+    </div>
+
+    <div class="thin-rule"></div>
+
+    <!-- FontFound -->
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">FontFound — AI-Powered Font Detection Application</span>
+        <span class="entry-date">Dec 2024</span>
+      </div>
+      <div class="entry-sub"><em>Cloud Engineer</em> &nbsp;·&nbsp; Bangkit Academy Capstone Project</div>
+      <ul>
+        <li>Provisioned full GCP stack: Cloud Run (NestJS backend), Cloud SQL (private IP via custom VPC subnet), Cloud Storage (image upload), Firebase Storage (mobile-backend integration), Artifact Registry (container images).</li>
+        <li>Configured IAM service accounts with scoped permissions for Cloud Build pipeline; built automated CI/CD — Cloud Build detects Dockerfile on each GitHub commit, builds image, pushes to Artifact Registry, and deploys to Cloud Run.</li>
+        <li>Set up VPC private IP connectivity between Cloud SQL and Cloud Run to restrict database access from public network.</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <div class="sec">Experience</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">Bangkit Academy led by Google, GoTo &amp; Traveloka</span>
+        <span class="entry-date">Sep 2024 – Jan 2025</span>
+      </div>
+      <div class="entry-sub"><em>Cloud Computing Cohort</em> &nbsp;·&nbsp; Jakarta, Indonesia</div>
+      <ul>
+        <li>Completed 900+ hours of structured GCP training (Cloud Run, Cloud SQL, Cloud Storage, IAM) with focus on real-world cloud deployment and CI/CD automation.</li>
+        <li>Contributed as Cloud Engineer in multidisciplinary capstone team — responsible for full infrastructure setup, pipeline automation, and cloud service integration.</li>
+      </ul>
+    </div>
+
+    <div class="thin-rule"></div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-title">MEGA Mentari</span>
+        <span class="entry-date">Jan 2020 – Mar 2020</span>
+      </div>
+      <div class="entry-sub"><em>Network Administrator Intern</em> &nbsp;·&nbsp; Kota Cirebon</div>
+      <ul>
+        <li>Managed MikroTik router/switch configurations and assisted field technicians on ISP installation, site survey, and connection testing for corporate and residential clients.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

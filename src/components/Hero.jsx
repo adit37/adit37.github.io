@@ -28,7 +28,7 @@ const Hero = () => {
             <a href="#expertise" className="btn btn-primary">
               Explore Expertise <ArrowRight size={18} />
             </a>
-            <a href="#" className="btn btn-secondary">
+            <a href="/CV_Muhammad_Adithya_Pratama.html" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
               Download CV <Download size={18} />
             </a>
           </div>
