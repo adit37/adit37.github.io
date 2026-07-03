@@ -16,8 +16,8 @@ const Hero = () => {
           </div>
           
           <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
-            Cloud Engineer <br />
-            <span className="text-gradient">& DevOps</span>
+            Cloud  <br />
+            <span className="text-gradient">Engineer</span>
           </h1>
           
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.125rem', marginBottom: '2.5rem', maxWidth: '480px' }}>
